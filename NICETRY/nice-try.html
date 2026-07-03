@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Access Denied</title>
+<style>
+  :root{
+    --bg:#0b0f0c;
+    --line:#1c2b1f;
+    --accent:#39ff6a;
+    --accent-dim:#1f8f3c;
+    --text:#e8ffe9;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    min-height:100vh;
+    background:
+      repeating-linear-gradient(0deg, transparent, transparent 39px, var(--line) 40px),
+      repeating-linear-gradient(90deg, transparent, transparent 39px, var(--line) 40px),
+      var(--bg);
+    color:var(--text);
+    font-family:'Courier New', Consolas, monospace;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px 20px;
+  }
+
+  .logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:36px;
+    letter-spacing:2px;
+  }
+  .logo svg{ width:38px; height:38px; }
+  .logo span{
+    font-size:20px;
+    font-weight:bold;
+    color:var(--accent);
+    text-shadow:0 0 8px var(--accent-dim);
+  }
+  .logo small{
+    display:block;
+    font-size:10px;
+    color:var(--accent-dim);
+    letter-spacing:4px;
+  }
+
+  .hand{
+    width:140px;
+    height:140px;
+    margin-bottom:28px;
+    filter:drop-shadow(0 0 18px rgba(57,255,106,0.35));
+    animation:pop .5s cubic-bezier(.34,1.56,.64,1);
+  }
+  @keyframes pop{
+    0%{ transform:scale(.3) rotate(-15deg); opacity:0; }
+    100%{ transform:scale(1) rotate(0deg); opacity:1; }
+  }
+
+  h1{
+    font-size:clamp(28px,6vw,56px);
+    margin:0 0 12px;
+    color:var(--accent);
+    text-shadow:0 0 12px rgba(57,255,106,.5);
+    letter-spacing:1px;
+  }
+  p.sub{
+    color:#9fdfaa;
+    font-size:14px;
+    max-width:480px;
+    line-height:1.6;
+    margin:0 0 30px;
+  }
+
+  .log{
+    text-align:left;
+    background:rgba(0,0,0,.4);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:16px 20px;
+    font-size:12px;
+    color:var(--accent-dim);
+    max-width:480px;
+    width:100%;
+  }
+  .log div{ margin-bottom:4px; }
+  .log .ok{ color:var(--accent); }
+
+  @media (prefers-reduced-motion: reduce){
+    .hand{ animation:none; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="logo">
+    <svg viewBox="0 0 48 48" fill="none">
+      <circle cx="24" cy="24" r="21" stroke="#39ff6a" stroke-width="2.5"/>
+      <path d="M24 12 L24 36 M13 20 L35 20" stroke="#39ff6a" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="24" cy="24" r="4" fill="#39ff6a"/>
+    </svg>
+    <span>NETGUARD<small>PERIMETER&nbsp;SECURITY</small></span>
+  </div>
+
+  <svg class="hand" viewBox="0 0 100 140" fill="none">
+    <path d="M35 130
+             C25 130 20 122 20 112
+             L20 70
+             C20 65 24 61 29 61
+             C31 61 33 62 34 63
+             L34 45
+             C34 40 38 36 43 36
+             C48 36 52 40 52 45
+             L52 30
+             C52 25 56 21 61 21
+             C66 21 70 25 70 30
+             L70 45
+             C70 40 74 36 79 36
+             C84 36 88 40 88 45
+             L88 100
+             C88 118 76 130 60 130
+             Z"
+          fill="#39ff6a"/>
+    <path d="M34 63 L34 90 M52 45 L52 90 M70 45 L70 90"
+          stroke="#0b0f0c" stroke-width="3" stroke-linecap="round"/>
+  </svg>
+
+  <h1>FUCK YOU FOR TRYING TO HACK</h1>
+  <p class="sub">Nice effort, but this perimeter isn't going down today.
+    Your attempt has been logged. Try knocking on the front door next time.</p>
+
+  <div class="log">
+    <div>[<span class="ok">OK</span>] intrusion attempt detected</div>
+    <div>[<span class="ok">OK</span>] connection fingerprinted</div>
+    <div>[<span class="ok">OK</span>] access request denied</div>
+    <div>[<span class="ok">OK</span>] middle finger deployed</div>
+  </div>
+
+</body>
+</html>
